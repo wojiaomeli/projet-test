@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, 'front-fil')));
 
 // Rediriger toutes les autres requêtes vers l'application frontale
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'front-fil', 'public' ,  'index.html'));
+  res.sendFile(path.join(__dirname, 'front-fil' ,  'index.html'));
 });
 
 // Port d'écoute
