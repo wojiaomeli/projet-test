@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 
 // Définir le dossier contenant vos fichiers frontaux comme dossier statique
-app.use(express.static(path.join(__dirname, 'front-fil')));
+app.use(express.static(path.join(__dirname, 'projet_fil', 'front-fil')));
 
 // Rediriger toutes les autres requêtes vers l'application frontale
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'front-fil' ,  'index.html'));
+  res.sendFile(path.join(__dirname, 'projet_fil', 'front-fil' , 'public' , 'index.html'));
 });
 
 // Port d'écoute
