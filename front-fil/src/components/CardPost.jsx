@@ -7,6 +7,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Posts from "./Posts";
 
+import {Link} from "react-router-dom";
+
 export default function CardPost(posts) {
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -30,8 +32,11 @@ export default function CardPost(posts) {
         </Typography>
       </CardContent>
       <CardActions>
+        <Link to={`/Post/{$Post.id}`}>
+        <Button size="small">Learn More</Button>
+        </Link>
         <Button size="small">Share</Button>
-        <Button size="small">Lire plus</Button>
+        
       </CardActions>
     </Card>
   );
